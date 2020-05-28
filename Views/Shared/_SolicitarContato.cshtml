@@ -1,0 +1,67 @@
+﻿@model ZulrahPortal.ViewModel.SolicitarContatoViewModel
+@{
+}
+
+@using (@Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+
+        @Html.EditorFor(model => model.NomeSolicitante, new {htmlAttributes = new { @class = "form-control", placeholder = "Nome"} })
+        @Html.ValidationMessageFor(m => m.NomeSolicitante, "", new { @class = "text-danger  " })
+        <br />
+
+        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { placeholder = "E-mail", @class = "form-control"} })
+        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger  " })
+        <br />
+
+        @Html.EditorFor(model => model.Empresa, new { htmlAttributes = new { placeholder = "Empresa (opcional) ", @class = "form-control" } })
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <br />
+
+        <div class="row">
+            <div class="col-md-3">
+                @Html.DropDownListFor(model => model.Ddd, (SelectList)ViewBag.Ddds,"DDD", new {@class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Ddd, "", new { @class = "text-danger  " })
+            </div>
+
+            <div class="col-sm-6">
+                @Html.EditorFor(model => model.NumeroTelefone, new { htmlAttributes = new { placeholder = "Número", @class = "form-control",@type="number" } })
+                @Html.ValidationMessageFor(m => m.NumeroTelefone, "", new { @class = "text-danger  " })
+            </div>
+
+        </div>
+
+        <br />
+        
+        Preferências de Contato
+        <div class="row">
+
+
+            <div class="checkbox col-1">
+                @Html.CheckBoxFor(model => model.ContatoViaEmail)
+            </div>
+            <div class="col">
+                @Html.LabelFor(c => c.ContatoViaEmail)
+            </div>
+
+            <div class="checkbox">
+                @Html.CheckBoxFor(model => model.ContatoViaTelefone)
+            </div>
+            
+            <div class="col">
+                @Html.LabelFor(c => c.ContatoViaTelefone)
+            </div>
+
+            <div class="checkbox">
+                @Html.CheckBoxFor(model => model.ContatoIndiferente)
+            </div>
+
+            <div class="col">
+                @Html.LabelFor(c => c.ContatoIndiferente)
+            </div>
+        </div>
+    </div>
+}

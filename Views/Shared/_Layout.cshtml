@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    @RenderSection("metatags", required: false)
+
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="@Url.Content("~/imagens/icon_Zulrah.ico")" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani|Share+Tech" rel="stylesheet">
+
+</head>
+<body>
+    <!--NAV-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" role="navigation">
+
+        <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+            <img class="logo-configs" width="230" alt="Logo da Zulrah" src="~/imagens/logo-site.png" />
+        </a>
+
+        @if (!(Request.Url.PathAndQuery.ToString() != "/Home/Index") || !(Request.Url.PathAndQuery.ToString() != "/"))
+        {
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        } else
+        {
+            <a class="align-right" href="@Url.Action("Index", "Home")">
+                <img class="arrow-left" alt="Ícone Voltar Página Principal" id="sobreLink" width="40" src="~/imagens/arrow-left-blue.png" />
+            </a>
+        }
+
+        <div class="collapse navbar-collapse" id="nav-content">
+            <ul class="navbar-nav ml-auto mt-2">
+                @if (Request.Url.PathAndQuery.ToString() != "/Home/Index" && Request.Url.PathAndQuery.ToString() != "/")
+                {
+                    @*<li class="nav-item active">
+                        <a class="nav-link-custom" href="@Url.Action("Index", "Home")"><img class="arrow-left" alt="Ícone Voltar Página Principal" id="sobreLink" width="40" src="~/imagens/arrow-left-blue.png" /></a>
+                    </li>*@
+                } else
+                {
+                    <li class="nav-item active">
+                        <a class="nav-link-custom" id="goToHome" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link-custom" id="goToSobre" href="#">SOBRE</a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link-custom" id="goToServicos" href="#">SERVIÇOS</a>
+                    </li>
+                    @*<li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                            <a class="nav-link-custom" id="goToClientes" href="#">CLIENTES</a>
+                        </li>*@
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link-custom" id="goToContato" href="#">CONTATO</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </nav>
+    <!--END NAV-->
+
+
+    @RenderBody()
+
+    <!--FOOTER-->
+    <footer class="config-footer">
+        <div class="bg-dark text-white borderFooter">
+            <div class="container">
+                <div class="row pt-5">
+                    <div class="col-md-4">
+                        <h2>Quem Somos</h2>
+                        <p class="text-justify">
+                            Somos uma equipe de profissionais inovadores que oferecem serviços de alta qualidade,
+                            pontualidade e valor agregado aos nossos clientes. Nosso sucesso é alcançado através da honestidade,
+                            palavra e ação para com nossos clientes, sempre sendo o braço direito no ambito tecnológico.
+
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h2>Contatos</h2>
+                        <p>
+                            @*<i class="fa fa-phone"></i> +55 (11) 5748-0402 <br />*@
+                        <p><i class="fa fa-envelope"></i> comercial@zulrah.com.br</p>
+                        @*<p><i class="fa fa-envelope br"></i> pbaraldini@zulrah.com.br</p>
+                            <p><i class="fa fa-envelope br"></i> gsiqueira@zulrah.com.br</p>*@
+
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <h2>Redes Sociais</h2>
+                        <a target="_blank" href="https://www.facebook.com/Zulrahsoftwares/"><img class="format-social-media" alt="Ícone Facebook" width="60" height="60" src="~/imagens/Icones-Footer/facebook.png" /></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/zulrah-softwares/about/?viewAsMember=true"><img class="format-social-media" alt="Ícone Linkedin" width="60" src="~/imagens/Icones-Footer/linkedin.png" /></a>
+                        @*<div style="display: block" />*@
+                        <a target="_blank" href="https://www.instagram.com/zulrahsoftwares/?hl=pt-br"><img class="format-social-media" alt="Ícone Instagram" width="60" src="~/imagens/Icones-Footer/instagram.png" /></a>
+                    </div>
+                </div>
+
+                @*<div class="col-md-12 copyright">
+                        <p>Copyright &copy; @DateTime.Now.Year - Zulrah Consultoria em Desenvolvimento de Software</p>
+                    </div>*@
+                <div class="row col-md-12 copyright">
+                    <div class="col-md-6">
+                        <p>Copyright &copy; @DateTime.Now.Year - Zulrah Consultoria em Desenvolvimento de Software</p>
+                    </div>
+                    <div class="col-md-6">
+                        @Html.ActionLink("Políticas de Privacidade", "PoliticasDePrivacidade", "Home", null, new { @class = "text-white" }) |
+                        @Html.ActionLink("Termos de Uso", "TermosDeUso", "Home", null, new { @class = "text-white" })
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--END FOOTER-->
+    <!--LICENSE ICONS-->
+    <div style="display: none">Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+    <!-- SCRIPTS RENDER -->
+    <script src="~/Scripts/sweetalert.js"></script>
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jssolutions")
+</body>
+</html>

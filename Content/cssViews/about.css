@@ -1,0 +1,53 @@
+﻿.box-content-services {
+    border-radius: 10px;
+    padding: 40px 20px 20px 20px;
+    -webkit-box-shadow: 10px 17px 54px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 17px 54px -7px rgba(0,0,0,0.75);
+    box-shadow: 10px 17px 54px -7px rgba(0,0,0,0.75);
+    background-color: white;
+    position: relative;
+    bottom: 30px;
+    margin: 120px 50px 0px 50px;
+    margin-bottom: -60px;
+}
+
+    .box-content-services h1 {
+        font-size: 30px;
+        width: auto;
+    }
+
+    .box-content-services p {
+        font-size: 17px !important;
+    }
+
+.pad-content {
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: justify;
+}
+
+    .pad-content h2 {
+        color: #24587A;
+    }
+
+@media (max-width: 992px) {
+    .box-content-services {
+        margin: 120px 10px -40px 10px;
+    }
+
+    .box-content-services p {
+        font-size: 10px !important;
+    }
+
+    .pad-content {
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: justify;
+    }
+}
+
+.align-right {
+    right: 20px;
+    position: absolute;
+    display: block
+}

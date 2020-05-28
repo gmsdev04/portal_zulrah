@@ -1,0 +1,160 @@
+﻿<head>
+    <title>Página Principal - Zulrah</title>
+    @section metatags{
+        <meta name="description"
+              content="A Zulrah é uma Consultoria de Software que oferece as melhores soluções para
+          seus problemas. Você tem alguma ideia? Solicite um contato.">
+        <meta name="keywords" content="">
+    }
+
+</head>
+
+<!--HEADER-->
+<header id="home">
+    <div id="carouselControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-image one">
+                    <div class="bg-opacity"></div>
+                </div>
+                <div class="content-center-carousel">
+                    <h2>Automatização Corporativa</h2>
+                    <p>
+                        Deixe as tarefas e os processos maçantes da sua empresa nas mãos <br />
+                        dos nossos bots, onde você gasta menos e produz muito mais.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image two">
+                    <div class="bg-opacity"></div>
+                </div>
+                <div class="content-center-carousel">
+                    <h2>Oportunidades de negócio</h2>
+                    <p>
+                        Converse conosco sobre sua ideia <br />
+                        e poderemos torná-la realidade
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image three">
+                    <div class="bg-opacity"></div>
+                </div>
+                <div class="content-center-carousel">
+                    <h2>As melhores práticas de SEO no seu site</h2>
+                    <p>
+                        Manteremos o seu site no topo das pesquisas dos principais buscadores <br />
+                        da internet utilizando as mais avançadas ferramentas.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</header>
+<!--END HEADER-->
+<!--ABOUT-->
+<section class="box-content" id="sobre">
+    <h1 class="text-center">Sobre a Zulrah</h1>
+    <p>
+        Nossos talentos são nosso maior ativo. Trabalhamos diariamente para aprimorar nossos conhecimentos
+        técnicos e gerenciais buscando a excelência nos nossos serviços.
+        Nossos profissionais atuam com a maior qualidade buscando desenvolver soluções que agregue o
+        maximo de valor aos nossos clientes. Contamos com
+        uma equipe de Gestores de projetos e especialistas nos nosso projetos para garantir o sucesso.
+    </p>
+
+    <div class="row pd-lines">
+        <div class="col-md-3" style="text-align: center;">
+            <img width="150" height="150" alt="Imagem que representa Missão" src="~/imagens/mission.png" />
+            <h2>Nossa Missão</h2>
+        </div>
+        <div class="col-md-9">
+            <p>
+                Desenvolver soluções de software com as melhores tecnologias disponíveis no mercado,
+                ser para os nossos clientes o seu braço direito no âmbito tecnológico
+            </p>
+        </div>
+    </div>
+    <div class="row pd-lines">
+        <div class="col-md-3" style="text-align: center">
+            <img width="150" height="150" alt="Imagem que representa Visão" src="~/imagens/vision.png" />
+            <h2 style="position: relative; bottom: 20px;">Nossa Visão</h2>
+        </div>
+        <div class="col-md-9">
+            <p>
+                Ser a maior consultoria no desenvolvimento de aplicações de automação corporativa do Brasil
+                e serviços personalizados de qualidade.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3" style="text-align: center">
+            <img width="150" height="150" alt="Imagem que representa Valores" src="~/imagens/values.png" />
+            <h2>Nossos valores</h2>
+        </div>
+        <div class="col-md-9">
+            <p>
+                Excelência nos serviços prestados, Conduta ética nos
+                nossos relacionamentos,senso de dono nos produtos desenvolvidos
+            </p>
+        </div>
+    </div>
+</section>
+<!--END ABOUT-->
+<!--SERVICES-->
+<section class="bg-servicos" id="servicos">
+    <h2 class="text-center">Nossos Serviços</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12 sobreBorderLayout text-center">
+                <img src="~/imagens/Imagens-Servicos/automation.png" width="60" alt="Ícone sobre Automatização" />
+                <h3>Automação Corporativa</h3>
+                <p>
+                    Automação de processos corporativos com bots incansáveis,
+                    foco na redução de custos e ganho de velocidade em tarefas realizadas em geral
+                </p>
+                @Html.ActionLink("Saiba mais", "Automatizacoes", "Home", null, new { @class = "text-orange" })
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12 sobreBorderLayout text-center">
+                <img src="~/imagens/Imagens-Servicos/web-page.png" width="60" alt="Ícone sobre Criação de Sites" />
+                <h3>Criação de Sites</h3>
+                <p>Desenvolvemos sites personalizados para todos os ramos do mercado, desde sites institucionais, portfólios e lojas virtuais</p>
+                @Html.ActionLink("Saiba mais", "CriacaoSites", "Home", null, new { @class = "text-orange" })
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12 sobreBorderLayout text-center">
+                <img src="~/imagens/Imagens-Servicos/login.png" width="60" alt="Ícone sobre Sistemas Personalizados" />
+                <h3>Sistemas personalizados</h3>
+                <p>
+                    Desenvolvimento ágil de sistemas sob medida para sua empresa com
+                    comprometimento e qualidade utilizando as melhores tecnologias do mercado
+                </p>
+                @Html.ActionLink("Saiba mais", "SistemasPersonalizados", "Home", null, new { @class = "text-orange" })
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12 sobreborderLayoutEnd text-center">
+                <img src="~/imagens/Imagens-Servicos/project.png" width="60" alt="Ícone sobre Turbinar Aplicações" />
+                <h3>Turbinar Aplicações</h3>
+                <p>Analise de performance, levantamento de pontos críticos, apontamento e acompanhamento de melhorias na arquitetura, programação e gestão da equipe</p>
+                @Html.ActionLink("Saiba mais", "Tuning", "Home", null, new { @class = "text-orange" })
+            </div>
+        </div>
+    </div>
+</section>
+<!--END SERVICES-->
+<!--CUSTOMERS-->
+@*@Html.Partial("_Customers")*@
+<!--END CUSTOMERS-->
+<!--CONTACT-->
+@Html.Partial("_Contact")
+<!--END CONTACT-->

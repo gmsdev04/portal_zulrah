@@ -1,0 +1,67 @@
+﻿@Styles.Render("~/Content/css")
+
+<section id="contato">
+    <div class="fixed-bg">
+        <div class="bg-form-opacity"></div>
+        <div class="container position-relative">
+            <div class="container-fluid">
+                <h2 class="text-white text-center">Entre em contato conosco</h2>
+
+                <form class="form-formatting" id="form" onsubmit="Validar()">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label>Nome</label>
+                            <input class="form-control" id="nome" type="text" name="NomeSolicitante" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Nome da empresa</label>
+                            <input class="form-control" id="empresa" type="text" name="NomeEmpresa" placeholder="opcional" />
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label>E-mail</label>
+                            <input class="form-control" id="email" type="email" name="Email" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label>DDD</label>
+                            <input class="form-control" id="ddd" type="text" name="DDD" />
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label>Telefone</label>
+                            <input class="form-control" id="telefone" type="text" name="Telefone" />
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label>Preferência de contato</label>
+                            <select class="form-control" id="formaContato" name="FormaContato">
+                                <option>Indiferente</option>
+                                <option>Telefone</option>
+                                <option>Email</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row mb-4">
+                        <div class="form-group col-md-8">
+                            <label>Descrição do serviço</label>
+                            <textarea class="form-control" rows="4" id="comentario" name="comentario" placeholder="opcional"></textarea>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <input type="submit" id="adiciona-solicitacao" value="Enviar" class="btn-block btn-warning btn-lg mt-5" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="~/Scripts/sweetalert.js"></script>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/jssolutions")
